@@ -37,5 +37,7 @@ suite =
                 \_ -> Expect.equal (loud Nothing) "FIVE"
             , test "loud in pig latin" <|
                 \_ -> Expect.equal (loud (Just "piglatin")) "IVEFAY"
+            , test "smooth" <|
+                \_ -> Expect.equal smooth "S"
             ]
         ]

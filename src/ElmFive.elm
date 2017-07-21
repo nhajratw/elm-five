@@ -1,4 +1,4 @@
-module ElmFive exposing (five, law, upHigh, downLow, roman, morseCode, negative, loud)
+module ElmFive exposing (five, law, upHigh, downLow, roman, morseCode, negative, loud, smooth)
 
 
 five : Int
@@ -34,6 +34,11 @@ tooSlow =
 roman : String
 roman =
     "V"
+
+
+smooth : String
+smooth =
+    "S"
 
 
 morseCode : String
