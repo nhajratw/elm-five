@@ -22,4 +22,10 @@ suite =
             , test "division" <|
                 \_ -> Expect.equal (five // five) 1
             ]
+        , describe "Alternative Forms of Five"
+            [ test "up high" <|
+                \_ -> Expect.equal upHigh "⁵"
+            , test "dow low" <|
+                \_ -> Expect.equal downLow "₅"
+            ]
         ]
