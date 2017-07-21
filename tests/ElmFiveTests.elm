@@ -51,5 +51,17 @@ suite =
             [ test "binary" <|
                 \_ ->
                     "101" |> Expect.equal binary
+            , test "octal" <|
+                \_ ->
+                    "5" |> Expect.equal octal
+            , test "hex" <|
+                \_ ->
+                    "5" |> Expect.equal hex
+            , test "base 3" <|
+                \_ ->
+                    "12" |> Expect.equal (base 3)
+            , test "base 4" <|
+                \_ ->
+                    "11" |> Expect.equal (base 4)
             ]
         ]

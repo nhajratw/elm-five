@@ -1,4 +1,4 @@
-module ElmFive exposing (five, law, upHigh, downLow, roman, morseCode, negative, loud, smooth, mdFive, golden, binary)
+module ElmFive exposing (five, law, upHigh, downLow, roman, morseCode, negative, loud, smooth, mdFive, golden, binary, octal, hex, base)
 
 
 five : Int
@@ -23,20 +23,30 @@ golden =
 
 binary : String
 binary =
-    base 2 5
+    base_ 2 5
 
 
-base : Int -> Int -> String
-base radix value =
-    case value of
-        0 ->
-            "0"
+octal : String
+octal =
+    base_ 8 5
 
-        1 ->
-            "1"
 
-        _ ->
-            toString (value % radix) ++ (base radix (value // radix))
+hex : String
+hex =
+    base_ 16 5
+
+
+base : Int -> String
+base radix =
+    base_ radix five
+
+
+base_ : Int -> Int -> String
+base_ radix value =
+    if (value < radix) then
+        toString value
+    else
+        (base_ radix (value // radix)) ++ toString (value % radix)
 
 
 law : String
