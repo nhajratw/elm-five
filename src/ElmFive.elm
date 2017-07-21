@@ -1,4 +1,4 @@
-module ElmFive exposing (five, law, upHigh, downLow, roman, morseCode, negative, loud, smooth)
+module ElmFive exposing (five, law, upHigh, downLow, roman, morseCode, negative, loud, smooth, mdFive, golden)
 
 
 five : Int
@@ -9,6 +9,16 @@ five =
 negative : Int
 negative =
     -five
+
+
+pointFive : Float
+pointFive =
+    toFloat five / 10
+
+
+golden : Float
+golden =
+    toFloat five ^ pointFive * pointFive + pointFive
 
 
 law : String
@@ -63,3 +73,8 @@ pigLatin original =
         , String.left 1 original
         , "AY"
         ]
+
+
+mdFive : String
+mdFive =
+    "30056e1cab7a61d256fc8edd970d14f5"

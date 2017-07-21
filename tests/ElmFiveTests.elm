@@ -40,4 +40,11 @@ suite =
             , test "smooth" <|
                 \_ -> 'S' |> Expect.equal smooth
             ]
+        , describe "Cryptography"
+            [ test "md5 hash" <|
+                \_ ->
+                    "30056e1cab7a61d256fc8edd970d14f5" |> Expect.equal mdFive
+            , test "golden rule or Phive" <|
+                \_ -> 1.618033988749895 |> Expect.equal golden
+            ]
         ]
