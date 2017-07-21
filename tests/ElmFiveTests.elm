@@ -47,4 +47,9 @@ suite =
             , test "golden rule or Phive" <|
                 \_ -> 1.618033988749895 |> Expect.equal golden
             ]
+        , describe "Different Radices"
+            [ test "binary" <|
+                \_ ->
+                    "101" |> Expect.equal binary
+            ]
         ]

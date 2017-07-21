@@ -1,4 +1,4 @@
-module ElmFive exposing (five, law, upHigh, downLow, roman, morseCode, negative, loud, smooth, mdFive, golden)
+module ElmFive exposing (five, law, upHigh, downLow, roman, morseCode, negative, loud, smooth, mdFive, golden, binary)
 
 
 five : Int
@@ -19,6 +19,24 @@ pointFive =
 golden : Float
 golden =
     toFloat five ^ pointFive * pointFive + pointFive
+
+
+binary : String
+binary =
+    base 2 5
+
+
+base : Int -> Int -> String
+base radix value =
+    case value of
+        0 ->
+            "0"
+
+        1 ->
+            "1"
+
+        _ ->
+            toString (value % radix) ++ (base radix (value // radix))
 
 
 law : String
