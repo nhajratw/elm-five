@@ -25,7 +25,17 @@ suite =
         , describe "Alternative Forms of Five"
             [ test "up high" <|
                 \_ -> Expect.equal upHigh "⁵"
-            , test "dow low" <|
+            , test "down low" <|
                 \_ -> Expect.equal downLow "₅"
+            , test "roman" <|
+                \_ -> Expect.equal roman "V"
+            , test "morse code" <|
+                \_ -> Expect.equal morseCode "....."
+            , test "negative" <|
+                \_ -> Expect.equal negative -5
+            , test "loud" <|
+                \_ -> Expect.equal (loud Nothing) "FIVE"
+            , test "loud in pig latin" <|
+                \_ -> Expect.equal (loud (Just "piglatin")) "IVEFAY"
             ]
         ]

@@ -1,9 +1,14 @@
-module ElmFive exposing (five, law, upHigh, downLow)
+module ElmFive exposing (five, law, upHigh, downLow, roman, morseCode, negative, loud)
 
 
 five : Int
 five =
     5
+
+
+negative : Int
+negative =
+    -five
 
 
 law : String
@@ -19,3 +24,37 @@ upHigh =
 downLow : String
 downLow =
     "₅"
+
+
+tooSlow : String
+tooSlow =
+    "TODO"
+
+
+roman : String
+roman =
+    "V"
+
+
+morseCode : String
+morseCode =
+    "....."
+
+
+loud : Maybe String -> String
+loud style =
+    case style of
+        Just "piglatin" ->
+            loud Nothing |> pigLatin
+
+        _ ->
+            "FIVE"
+
+
+pigLatin : String -> String
+pigLatin original =
+    String.concat
+        [ String.dropLeft 1 original
+        , String.left 1 original
+        , "AY"
+        ]
