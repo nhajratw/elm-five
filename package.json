@@ -1,0 +1,22 @@
+{
+  "name": "elm-five",
+  "version": "1.0.0",
+  "description": "Elm Five",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "elm-live": "^2.7.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "elm-test"
+  },
+  "keywords": [
+    "elm",
+    "five"
+  ],
+  "author": "Nayan Hajratwala",
+  "license": "ISC"
+}
