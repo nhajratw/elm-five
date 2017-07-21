@@ -16,14 +16,14 @@ law =
     "The Law of Fives states simply that: All things happen in fives, or are divisible by or are multiples of five, or are somehow directly or indirectly appropriate to 5. The Law of Fives is never wrong."
 
 
-upHigh : String
+upHigh : Char
 upHigh =
-    "⁵"
+    '⁵'
 
 
-downLow : String
+downLow : Char
 downLow =
-    "₅"
+    '₅'
 
 
 tooSlow : String
@@ -31,14 +31,14 @@ tooSlow =
     "TODO"
 
 
-roman : String
+roman : Char
 roman =
-    "V"
+    'V'
 
 
-smooth : String
+smooth : Char
 smooth =
-    "S"
+    'S'
 
 
 morseCode : String

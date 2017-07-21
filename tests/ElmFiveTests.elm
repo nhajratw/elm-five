@@ -10,34 +10,34 @@ suite =
     describe "The ElmFive Module"
         [ describe "Basics"
             [ test "gives five" <|
-                \_ -> Expect.equal five 5
+                \_ -> 5 |> Expect.equal five
             ]
         , describe "The Law of Fives"
             [ test "statement" <|
-                \_ -> Expect.equal law "The Law of Fives states simply that: All things happen in fives, or are divisible by or are multiples of five, or are somehow directly or indirectly appropriate to 5. The Law of Fives is never wrong."
+                \_ -> "The Law of Fives states simply that: All things happen in fives, or are divisible by or are multiples of five, or are somehow directly or indirectly appropriate to 5. The Law of Fives is never wrong." |> Expect.equal law
             , test "addition" <|
-                \_ -> Expect.equal (five + five) 10
+                \_ -> 10 |> Expect.equal (five + five)
             , test "multiplication" <|
-                \_ -> Expect.equal (five * five) 25
+                \_ -> 25 |> Expect.equal (five * five)
             , test "division" <|
-                \_ -> Expect.equal (five // five) 1
+                \_ -> 1 |> Expect.equal (five // five)
             ]
         , describe "Alternative Forms of Five"
             [ test "up high" <|
-                \_ -> Expect.equal upHigh "⁵"
+                \_ -> '⁵' |> Expect.equal upHigh
             , test "down low" <|
-                \_ -> Expect.equal downLow "₅"
+                \_ -> '₅' |> Expect.equal downLow
             , test "roman" <|
-                \_ -> Expect.equal roman "V"
+                \_ -> 'V' |> Expect.equal roman
             , test "morse code" <|
-                \_ -> Expect.equal morseCode "....."
+                \_ -> "....." |> Expect.equal morseCode
             , test "negative" <|
-                \_ -> Expect.equal negative -5
+                \_ -> -5 |> Expect.equal negative
             , test "loud" <|
-                \_ -> Expect.equal (loud Nothing) "FIVE"
+                \_ -> "FIVE" |> Expect.equal (loud Nothing)
             , test "loud in pig latin" <|
-                \_ -> Expect.equal (loud (Just "piglatin")) "IVEFAY"
+                \_ -> "IVEFAY" |> Expect.equal (loud (Just "piglatin"))
             , test "smooth" <|
-                \_ -> Expect.equal smooth "S"
+                \_ -> 'S' |> Expect.equal smooth
             ]
         ]
