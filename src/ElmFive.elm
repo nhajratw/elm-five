@@ -1,4 +1,4 @@
-module ElmFive exposing (five, law, upHigh, downLow, roman, morseCode, negative, loud, smooth, mdFive, golden, binary, octal, hex, base, translate)
+module ElmFive exposing (five, law, upHigh, downLow, roman, morseCode, negative, loud, smooth, mdFive, golden, binary, octal, hex, base, translate, isFive)
 
 import Dict exposing (Dict)
 
@@ -189,10 +189,6 @@ translate language =
             translation
 
 
-
--- case language of
---     "arabic" ->
---         "خمسة"
---
---     _ ->
---         "five"
+isFive : Int -> Bool
+isFive value =
+    value == five

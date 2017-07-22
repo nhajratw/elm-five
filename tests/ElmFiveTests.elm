@@ -69,4 +69,10 @@ suite =
             , test "serbian" <|
                 \_ -> "pet" |> Expect.equal (translate "serbian")
             ]
+        , describe "Assertions"
+            [ test "is not five as a number" <|
+                \_ -> isFive 10 |> Expect.false "should be false"
+            , test "is five as a number" <|
+                \_ -> isFive 5 |> Expect.true "should be true"
+            ]
         ]
