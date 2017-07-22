@@ -1,6 +1,6 @@
-module ElmFive exposing (five, law, upHigh, downLow, roman, morseCode, negative, loud, smooth, mdFive, golden, binary, octal, hex, base, translate, isFive)
+module ElmFive exposing (five, law, upHigh, downLow, roman, morseCode, negative, loud, smooth, mdFive, golden, binary, octal, hex, base, translate, isFive, filter, map, reduce)
 
-import Dict exposing (Dict)
+import Dict exposing (Dict, values)
 
 
 five : Int
@@ -192,3 +192,18 @@ translate language =
 isFive : Int -> Bool
 isFive value =
     value == five
+
+
+filter : List Int -> List Int
+filter values =
+    List.filter (\value -> isFive value) values
+
+
+map : List Int -> List Int
+map values =
+    List.map (\value -> five) values
+
+
+reduce : List Int -> Int
+reduce values =
+    five

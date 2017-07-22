@@ -71,8 +71,16 @@ suite =
             ]
         , describe "Assertions"
             [ test "is not five as a number" <|
-                \_ -> isFive 10 |> Expect.false "should be false"
+                \_ -> isFive 10 |> Expect.equal False
             , test "is five as a number" <|
-                \_ -> isFive 5 |> Expect.true "should be true"
+                \_ -> isFive 5 |> Expect.equal True
+            ]
+        , describe "Higher Order Functions"
+            [ test "filter" <|
+                \_ -> filter [ 5, 6, 5 ] |> Expect.equal [ 5, 5 ]
+            , test "map" <|
+                \_ -> map [ 1, 2, 3 ] |> Expect.equal [ 5, 5, 5 ]
+            , test "reduce" <|
+                \_ -> reduce [ 1, 2, 3 ] |> Expect.equal 5
             ]
         ]
