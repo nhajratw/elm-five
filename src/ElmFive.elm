@@ -1,4 +1,6 @@
-module ElmFive exposing (five, law, upHigh, downLow, roman, morseCode, negative, loud, smooth, mdFive, golden, binary, octal, hex, base)
+module ElmFive exposing (five, law, upHigh, downLow, roman, morseCode, negative, loud, smooth, mdFive, golden, binary, octal, hex, base, translate)
+
+import Dict exposing (Dict)
 
 
 five : Int
@@ -106,3 +108,91 @@ pigLatin original =
 mdFive : String
 mdFive =
     "30056e1cab7a61d256fc8edd970d14f5"
+
+
+translations : Dict String String
+translations =
+    Dict.fromList
+        [ ( "arabic", "خمسة" )
+        , ( "azerbaijani", "beş" )
+        , ( "basque", "bost" )
+        , ( "belarusian", "пяць" )
+        , ( "bosnian", "pet" )
+        , ( "bulgarian", "пет" )
+        , ( "catalan", "cinc" )
+        , ( "chinese", "五" )
+        , ( "chinese-pinyin", "wǔ" )
+        , ( "chinese-financial", "伍" )
+        , ( "choctaw", "tahlapi" )
+        , ( "croatian", "pet" )
+        , ( "czech", "pět" )
+        , ( "dothraki", "mek" )
+        , ( "dovah", "hen" )
+        , ( "dutch", "vijf" )
+        , ( "elvish", "lempë" )
+        , ( "elvish-quenya", "lempë" )
+        , ( "elvish-sindarin", "leben" )
+        , ( "english", "five" )
+        , ( "esperanto", "kvin" )
+        , ( "estonian", "viis" )
+        , ( "finnish", "viisi" )
+        , ( "french", "cinq" )
+        , ( "german", "fünf" )
+        , ( "greek", "πέντε" )
+        , ( "hebrew", "חמש" )
+        , ( "hindi", "पांच" )
+        , ( "hungarian", "öt" )
+        , ( "icelandic", "fimm" )
+        , ( "indonesian", "lima" )
+        , ( "irish", "cúig" )
+        , ( "italian", "cinque" )
+        , ( "japanese", "五" )
+        , ( "kannada", "ಐದು" )
+        , ( "klingon", "vagh" )
+        , ( "korean", "오" )
+        , ( "latin", "quinque" )
+        , ( "latvian", "pieci" )
+        , ( "lithuanian", "penki" )
+        , ( "maltese", "ħamsa" )
+        , ( "mongolian", "таван" )
+        , ( "nepali", "पाँच" )
+        , ( "norwegian", "fem" )
+        , ( "persian", "پنج" )
+        , ( "piglatin", "ivefay" )
+        , ( "polish", "pięć" )
+        , ( "portuguese", "cinco" )
+        , ( "punjabi", "ਪੰਜ" )
+        , ( "romanian", "cinci" )
+        , ( "russian", "пять" )
+        , ( "serbian", "pet" )
+        , ( "sinhala", "පහ" )
+        , ( "slovakian", "päť" )
+        , ( "slovenian", "pet" )
+        , ( "spanish", "cinco" )
+        , ( "swedish", "fem" )
+        , ( "tamil", "ஐந்து" )
+        , ( "telugu", "ఐదు" )
+        , ( "thai", "ห้า" )
+        , ( "turkish", "beş" )
+        , ( "ukrainian", "п’ять" )
+        , ( "welsh", "pump" )
+        ]
+
+
+translate : String -> String
+translate language =
+    case Dict.get language translations of
+        Nothing ->
+            "five"
+
+        Just translation ->
+            translation
+
+
+
+-- case language of
+--     "arabic" ->
+--         "خمسة"
+--
+--     _ ->
+--         "five"

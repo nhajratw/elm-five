@@ -49,19 +49,24 @@ suite =
             ]
         , describe "Different Radices"
             [ test "binary" <|
-                \_ ->
-                    "101" |> Expect.equal binary
+                \_ -> "101" |> Expect.equal binary
             , test "octal" <|
-                \_ ->
-                    "5" |> Expect.equal octal
+                \_ -> "5" |> Expect.equal octal
             , test "hex" <|
-                \_ ->
-                    "5" |> Expect.equal hex
+                \_ -> "5" |> Expect.equal hex
             , test "base 3" <|
-                \_ ->
-                    "12" |> Expect.equal (base 3)
+                \_ -> "12" |> Expect.equal (base 3)
             , test "base 4" <|
-                \_ ->
-                    "11" |> Expect.equal (base 4)
+                \_ -> "11" |> Expect.equal (base 4)
+            ]
+        , describe "Multilingual Abilities"
+            [ test "defaults to english" <|
+                \_ -> "five" |> Expect.equal (translate "non-existent-language")
+            , test "english" <|
+                \_ -> "five" |> Expect.equal (translate "english")
+            , test "arabic" <|
+                \_ -> "خمسة" |> Expect.equal (translate "arabic")
+            , test "serbian" <|
+                \_ -> "pet" |> Expect.equal (translate "serbian")
             ]
         ]
