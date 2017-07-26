@@ -25,17 +25,17 @@ golden =
 
 binary : String
 binary =
-    base_ 2 5
+    base_ 2 five
 
 
 octal : String
 octal =
-    base_ 8 5
+    base_ 8 five
 
 
 hex : String
 hex =
-    base_ 16 5
+    base_ 16 five
 
 
 base : Int -> String
@@ -181,12 +181,8 @@ translations =
 
 translate : String -> String
 translate language =
-    case Dict.get language translations of
-        Nothing ->
-            "five"
-
-        Just translation ->
-            translation
+    Dict.get language translations
+        |> Maybe.withDefault "five"
 
 
 isFive : Int -> Bool
