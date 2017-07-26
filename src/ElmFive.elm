@@ -186,18 +186,18 @@ translate language =
 
 
 isFive : Int -> Bool
-isFive value =
-    value == five
+isFive =
+    (==) five
 
 
 filter : List Int -> List Int
-filter values =
-    List.filter (\value -> isFive value) values
+filter =
+    List.filter isFive
 
 
 map : List Int -> List Int
-map values =
-    List.map (\value -> five) values
+map =
+    List.map (always five)
 
 
 reduce : List Int -> Int
