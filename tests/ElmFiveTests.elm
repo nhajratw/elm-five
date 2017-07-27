@@ -87,4 +87,8 @@ suite =
             , test "reduce" <|
                 \_ -> reduce [ 1, 2, 3 ] |> Expect.equal 5
             ]
+        , describe "Rotation"
+            [ test "rotate by five" <|
+                \_ -> "kn{j3jqr" |> Expect.equal (rotate "five.elm")
+            ]
         ]

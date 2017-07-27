@@ -1,6 +1,7 @@
-module ElmFive exposing (five, law, upHigh, downLow, roman, morseCode, negative, loud, smooth, mdFive, golden, binary, octal, hex, base, translate, isFive, filter, map, reduce, factorial, bucks)
+module ElmFive exposing (five, law, upHigh, downLow, roman, morseCode, negative, loud, smooth, mdFive, golden, binary, octal, hex, base, translate, isFive, filter, map, reduce, factorial, bucks, rotate)
 
 import Dict exposing (Dict, values)
+import Char
 
 
 five : Int
@@ -64,6 +65,11 @@ base_ radix value =
         toString value
     else
         (base_ radix (value // radix)) ++ toString (value % radix)
+
+
+rotate : String -> String
+rotate value =
+    String.map (\c -> Char.toCode c |> (+) five |> Char.fromCode) value
 
 
 law : String
