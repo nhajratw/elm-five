@@ -1,4 +1,4 @@
-module ElmFive exposing (five, law, upHigh, downLow, roman, morseCode, negative, loud, smooth, mdFive, golden, binary, octal, hex, base, translate, isFive, filter, map, reduce, factorial, bucks, rotate)
+module ElmFive exposing (five, law, upHigh, downLow, roman, morseCode, negative, loud, smooth, mdFive, golden, binary, octal, hex, base, translate, isFive, filter, map, reduce, factorial, bucks, rotate, oclock, oclocksomewhere, guys)
 
 import Dict exposing (Dict, values)
 import Char
@@ -100,6 +100,21 @@ roman =
 smooth : Char
 smooth =
     'S'
+
+
+oclock : Char
+oclock =
+    '🕔'
+
+
+oclocksomewhere : Char
+oclocksomewhere =
+    '🍺'
+
+
+guys : Char
+guys =
+    '🍔'
 
 
 bucks : String

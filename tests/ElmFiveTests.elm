@@ -91,4 +91,12 @@ suite =
             [ test "rotate by five" <|
                 \_ -> "kn{j3jqr" |> Expect.equal (rotate "five.elm")
             ]
+        , describe "Unicode"
+            [ test "o'clock" <|
+                \_ -> '🕔' |> Expect.equal oclock
+            , test "o'clock somewhere" <|
+                \_ -> '🍺' |> Expect.equal oclocksomewhere
+            , test "guys" <|
+                \_ -> '🍔' |> Expect.equal guys
+            ]
         ]
