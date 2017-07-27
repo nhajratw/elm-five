@@ -1,4 +1,4 @@
-module ElmFive exposing (five, law, upHigh, downLow, roman, morseCode, negative, loud, smooth, mdFive, golden, binary, octal, hex, base, translate, isFive, filter, map, reduce, factorial)
+module ElmFive exposing (five, law, upHigh, downLow, roman, morseCode, negative, loud, smooth, mdFive, golden, binary, octal, hex, base, translate, isFive, filter, map, reduce, factorial, bucks)
 
 import Dict exposing (Dict, values)
 
@@ -96,9 +96,14 @@ smooth =
     'S'
 
 
+bucks : String
+bucks =
+    "$" ++ toString five ++ ".00"
+
+
 morseCode : String
 morseCode =
-    "....."
+    String.repeat five "."
 
 
 loud : Maybe String -> String

@@ -41,6 +41,8 @@ suite =
                 \_ -> "IVEFAY" |> Expect.equal (loud (Just "piglatin"))
             , test "smooth" <|
                 \_ -> 'S' |> Expect.equal smooth
+            , test "bucks" <|
+                \_ -> "$5.00" |> Expect.equal bucks
             ]
         , describe "Cryptography"
             [ test "md5 hash" <|
