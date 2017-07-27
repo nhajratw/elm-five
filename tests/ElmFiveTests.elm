@@ -21,6 +21,8 @@ suite =
                 \_ -> 25 |> Expect.equal (five * five)
             , test "division" <|
                 \_ -> 1 |> Expect.equal (five // five)
+            , test "factorial" <|
+                \_ -> 120 |> Expect.equal factorial
             ]
         , describe "Alternative Forms of Five"
             [ test "up high" <|

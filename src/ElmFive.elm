@@ -1,4 +1,4 @@
-module ElmFive exposing (five, law, upHigh, downLow, roman, morseCode, negative, loud, smooth, mdFive, golden, binary, octal, hex, base, translate, isFive, filter, map, reduce)
+module ElmFive exposing (five, law, upHigh, downLow, roman, morseCode, negative, loud, smooth, mdFive, golden, binary, octal, hex, base, translate, isFive, filter, map, reduce, factorial)
 
 import Dict exposing (Dict, values)
 
@@ -11,6 +11,21 @@ five =
 negative : Int
 negative =
     -five
+
+
+factorial : Int
+factorial =
+    factorial_ five
+
+
+factorial_ : Int -> Int
+factorial_ value =
+    case value of
+        1 ->
+            1
+
+        _ ->
+            value - 1 |> factorial_ |> (*) value
 
 
 pointFive : Float
