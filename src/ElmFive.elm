@@ -233,7 +233,7 @@ isFive value =
 
 filter : List Int -> List Int
 filter values =
-    List.filter (\value -> isFive value) values
+    List.filter isFive values
 
 
 map : List Int -> List Int
